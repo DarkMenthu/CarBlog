@@ -7,10 +7,10 @@ This a test blog, unfortunately is not fully functional..
 ## Bugs
 
 <ol>
-  <li>Edit functionality for the articles</li>
-  <li>Edit functionality for the categories</li>
-  <li>Create articles with the available categories</li>
-  <li>Sepparate pages for each category with each article</li>
+  <li>Edit functionality for the articles;</li>
+  <li>Edit functionality for the categories;</li>
+  <li>Create articles with the available categories;</li>
+  <li>Sepparate pages for each category with each article;</li>
   <li>...</li>
 </ol>
 
