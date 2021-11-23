@@ -1,10 +1,8 @@
 # CarBlog
----
 
 ## Intro
 
 This a test blog, unfortunately is not fully functional..
----
 
 ## Bugs
 
@@ -17,7 +15,6 @@ This a test blog, unfortunately is not fully functional..
 </ol>
 
 Changes are to be expected in the near future.
----
 
 ## Dependencies
 
