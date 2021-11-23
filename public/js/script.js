@@ -1,0 +1,37 @@
+let addSpecsBtn = document.getElementById('addSpecsBtn');
+let specList = document.querySelector('.specList');
+let specDiv = document.querySelectorAll('.specDiv')[0];
+
+addSpecsBtn.addEventListener('click', function(){
+  let newSpecs = specDiv.cloneNode(true);
+  let input = newSpecs.getElementsByTagName('input')[0];
+  input.value = '';
+  specList.appendChild(newSpecs);
+});
+
+function currentTime() {
+
+  let date = new Date();
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = "AM";
+
+
+  if (hh > 12) {
+      session = "PM";
+  }
+
+  hh = (hh < 10) ? "0" + hh : hh;
+  mm = (mm < 10) ? "0" + mm : mm;
+  ss = (ss < 10) ? "0" + ss : ss;
+
+  let time = hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerText = time;
+
+  var t = setTimeout(function () { currentTime() }, 1000);
+
+}
+
+currentTime();

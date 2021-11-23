@@ -1,0 +1,117 @@
+
+<!-- logo -->
+<div class="row flex-lg-row-reverse align-items-center g-5 py-4 mb-4">
+  <div class="col-12 col-lg-6">
+    <img src="/img/1908-Ford-Model-T.jpg" width="530" class="img-fluid" alt="logo">
+  </div>
+
+<!-- title -->
+  <div class="col-12 col-lg-6">
+    <h1 class="display-5 fw-bold mb-3">Car blog</h1>
+    <p class="lead"><q>Leave sooner, drive slower, live longer.</q></p>
+  </div>
+</div>
+
+<!-- categories -->
+<div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
+
+  <% if(categories != '') { %>
+    <% categories.forEach(function(category, index) { %>
+      <a href="/categories/<%- category.name %>" class="btn btn-info col text-center category__link">
+        <div class="pt-1"><%- category.name %></div>
+      </a>
+    <% }) %>
+  <% } %>
+
+  <a href="/categories" class="btn btn-warning col text-center category__link">
+    <div class="pt-1">View categories</div>
+  </a>
+</div>
+
+<!-- latest articles -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items-center">
+    <h2>Latest articles</h2>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+
+    <% if(eng != '') { %>
+      <% eng.latest.forEach(function(article, index){ %>
+      <a href="/article/<%= article._id %>" class="something btn btn-outline-dark col text-center category__link">
+        <div class="pt-1"><%= article.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  </div>
+
+</section>
+
+<!-- petrol -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items-center">
+    <h2>Petrol articles</h2>
+    <a href="/categories/Petrol" class="btn btn-light ms-auto">View More</a>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(typeof eng.petrol !== 'undefined' && eng.petrol.length > 0) { %>
+      <% eng.petrol.forEach(function(article, index){ %>
+      <a href="/article/<%= article._id %>" class="btn btn-dark col text-center category__link">
+        <div class="pt-1"><%= article.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- diesel -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items-center">
+    <h2>Diesel articles</h2>
+    <a href="/categories/Diesel" class="btn btn-light ms-auto">View More</a>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(eng.diesel != '') { %>
+      <% eng.diesel.forEach(function(article, index){ %>
+      <a href="/article/<%= article._id %>" class="btn btn-secondary col text-center category__link">
+        <div class="pt-1"><%= article.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- hybrid -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items-center">
+    <h2>Hybrid articles</h2>
+    <a href="/categories/Hybrid" class="btn btn-light ms-auto">View More</a>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(eng.hybrid != '') { %>
+      <% eng.hybrid.forEach(function(article, index){ %>
+      <a href="/article/<%= article._id %>" class="btn btn-success col text-center category__link">
+        <div class="pt-1"><%= article.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- Submit - Start -->
+<section class="px-4 py-5 my-5 text-center">
+  <h3 class="display-5 fw-bold">Thank you for your support, drive safe.</h3>
+</section>
+ 
+<!-- Submit - End -->
